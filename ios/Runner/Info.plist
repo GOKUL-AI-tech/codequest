@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- ── APP IDENTITY ─────────────────────────────────────────────────── -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>CodeQuest</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>CodeQuest</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
+
+    <!-- ── ORIENTATION ──────────────────────────────────────────────────── -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- ── LAUNCH SCREEN ────────────────────────────────────────────────── -->
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+
+    <!-- ── STATUS BAR ───────────────────────────────────────────────────── -->
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleLightContent</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+
+    <!-- ── DEEP LINKS (URL Schemes) ─────────────────────────────────────── -->
+    <!-- Supabase Auth callback: codequest://login-callback -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>com.codequest.app</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>codequest</string>
+            </array>
+        </dict>
+        <!-- Google Sign-In reversed client ID -->
+        <!-- Replace with value from GoogleService-Info.plist REVERSED_CLIENT_ID -->
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>google-signin</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.YOUR_REVERSED_CLIENT_ID</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- ── ASSOCIATED DOMAINS (Universal Links) ─────────────────────────── -->
+    <!-- Enable in Xcode: Signing & Capabilities > Associated Domains          -->
+    <!-- Add: applinks:codequest.app                                            -->
+
+    <!-- ── PERMISSIONS ──────────────────────────────────────────────────── -->
+    <key>NSCameraUsageDescription</key>
+    <string>CodeQuest uses the camera so you can upload a profile photo.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>CodeQuest uses your photo library so you can choose a profile picture.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>CodeQuest needs permission to save achievement screenshots.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>CodeQuest may use the microphone for voice-to-code features.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Use Face ID to quickly sign in to CodeQuest.</string>
+
+    <!-- ── NETWORK ──────────────────────────────────────────────────────── -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!-- Allow all HTTPS connections (Supabase, Firebase, CDNs) -->
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <!-- Supabase project domain -->
+            <key>supabase.co</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- ── PUSH NOTIFICATIONS ────────────────────────────────────────────── -->
+    <!-- Firebase Messaging requires these entitlements in the .entitlements file -->
+    <!-- aps-environment: development / production -->
+
+    <!-- ── FLUTTER ──────────────────────────────────────────────────────── -->
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
+
+    <!-- ── GOOGLE SERVICES ──────────────────────────────────────────────── -->
+    <!-- Make sure GoogleService-Info.plist is added to the Runner target in Xcode -->
+
+</dict>
+</plist>

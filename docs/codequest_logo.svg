@@ -1,0 +1,48 @@
+<svg width="1024" height="1024" viewBox="0 0 680 740" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>CodeQuest logo</title>
+  <desc>CodeQuest app icon with C-Q monogram in cyan-to-purple gradient, code angle-bracket symbol, and upward navigation arrow on a dark rounded square background</desc>
+
+  <defs>
+    <linearGradient id="arcGrad" x1="22%" y1="2%" x2="78%" y2="98%">
+      <stop offset="0%" stop-color="#00CCFF"/>
+      <stop offset="48%" stop-color="#4455EE"/>
+      <stop offset="100%" stop-color="#CC00FF"/>
+    </linearGradient>
+    <linearGradient id="arrGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#00EEFF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    <linearGradient id="txtGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#BB00FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="90" y="10" width="500" height="712" rx="90" fill="#0B0C12"/>
+  <rect x="90" y="10" width="500" height="712" rx="90" fill="none" stroke="#1A1B2E" stroke-width="1.5"/>
+
+  <!-- C arc: center(340,272) R=143, gap ±40° from right -->
+  <path d="M 449 180 A 143 143 0 1 0 449 364"
+        fill="none" stroke="url(#arcGrad)" stroke-width="46" stroke-linecap="round"/>
+
+  <!-- Q tail -->
+  <path d="M 449 364 L 504 420"
+        fill="none" stroke="url(#arcGrad)" stroke-width="46" stroke-linecap="round"/>
+
+  <!-- Navigation arrow at top of C ring -->
+  <polygon points="340,100 313,154 340,140 367,154" fill="url(#arrGrad)"/>
+  <polygon points="340,100 313,154 323,154 340,114" fill="url(#arrGrad)" opacity="0.6"/>
+  <polygon points="340,100 367,154 357,154 340,114" fill="url(#arrGrad)" opacity="0.6"/>
+
+  <!-- </> code symbol inside C -->
+  <text x="340" y="294" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="50" font-weight="700" fill="#00CCFF" letter-spacing="5">&lt;/&gt;</text>
+
+  <!-- codequest wordmark -->
+  <text x="340" y="624" text-anchor="middle"
+        font-family="'Trebuchet MS', 'Gill Sans', Arial, sans-serif"
+        font-size="50" font-weight="700" letter-spacing="1" fill="url(#txtGrad)">codequest</text>
+</svg>

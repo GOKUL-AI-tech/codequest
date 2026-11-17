@@ -1,0 +1,37 @@
+{
+    "name": "CodeQuest — Code. Level Up. Conquer.",
+    "short_name": "CodeQuest",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0A0E1A",
+    "theme_color": "#00F5FF",
+    "description": "The gamified coding learning platform. Battle, level up, and master programming.",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "categories": ["education", "games", "productivity"],
+    "screenshots": [],
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

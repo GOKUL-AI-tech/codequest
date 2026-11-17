@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeQuest — Gamified Coding Learning Platform. Code. Level Up. Conquer.">
+  <meta name="keywords" content="coding, learn to code, programming, gamified, python, javascript, dart, java">
+  <meta name="theme-color" content="#00F5FF">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CodeQuest — Code. Level Up. Conquer.">
+  <meta property="og:description" content="The gamified coding learning platform. Battle, level up, and master programming one lesson at a time.">
+  <meta property="og:image" content="icons/Icon-512.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CodeQuest">
+  <meta name="twitter:description" content="Gamified coding learning — earn XP, battle friends, and master code.">
+
+  <!-- iOS / PWA -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CodeQuest">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="manifest" href="manifest.json">
+
+  <title>CodeQuest — Code. Level Up. Conquer.</title>
+
+  <style>
+    /* Loading screen while Flutter initializes */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0A0E1A;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #loading-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    #loading-logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #BF00FF, #00F5FF);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    #loading-title {
+      color: #E8EAF6;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    #loading-bar-container {
+      width: 200px;
+      height: 3px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    #loading-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #00F5FF, #BF00FF);
+      border-radius: 2px;
+      animation: loadBar 2s ease-in-out infinite;
+    }
+
+    #loading-tagline {
+      color: #4A5568;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 20px rgba(0, 245, 255, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(0, 245, 255, 0.6); }
+    }
+
+    @keyframes loadBar {
+      0% { width: 0%; margin-left: 0; }
+      50% { width: 70%; margin-left: 0; }
+      100% { width: 0%; margin-left: 100%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Shown while Flutter engine loads -->
+  <div id="loading-screen">
+    <div id="loading-logo">&lt;/&gt;</div>
+    <div id="loading-title">CodeQuest</div>
+    <div id="loading-bar-container">
+      <div id="loading-bar"></div>
+    </div>
+    <div id="loading-tagline">CODE · LEVEL UP · CONQUER</div>
+  </div>
+
+  <script>
+    // Hide loading screen once Flutter is ready
+    window.addEventListener('flutter-first-frame', function() {
+      const loader = document.getElementById('loading-screen');
+      if (loader) {
+        loader.style.transition = 'opacity 0.4s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 400);
+      }
+    });
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

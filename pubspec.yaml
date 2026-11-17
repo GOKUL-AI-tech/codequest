@@ -1,0 +1,84 @@
+name: codequest
+description: CodeQuest - Gamified Coding Learning Platform
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Supabase
+  supabase_flutter: ^2.5.0
+
+  # HTTP (AI Mentor API calls)
+  http: ^1.2.2
+
+  # State Management
+  flutter_riverpod: ^3.3.1
+
+  # Navigation
+  go_router: ^17.2.3
+
+  # Local Storage
+  hive_flutter: ^1.1.0
+
+  # Animations
+  lottie: ^3.1.2
+  flutter_animate: ^4.5.0
+  animated_text_kit: ^4.2.2
+  shimmer: ^3.0.0
+
+  # UI Components
+  google_fonts: ^8.1.0
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.3.1
+  fl_chart: ^1.2.0
+  percent_indicator: ^4.2.3
+
+  # Code Editor
+  flutter_highlight: ^0.7.0
+  highlight: ^0.7.0
+
+  # Networking
+  dio: ^5.4.3+1
+  connectivity_plus: ^7.1.1
+
+  # Utils
+  equatable: ^2.0.5
+  uuid: ^4.4.0
+  intl: ^0.20.2
+  timeago: ^3.6.1
+  url_launcher: 6.3.2
+  share_plus: ^10.1.4
+  image_picker: ^1.1.2
+  permission_handler: ^12.0.1
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+  flutter_timezone: ^3.0.0
+  path_provider: ^2.1.3
+  flutter_tts: ^4.2.0
+  shared_preferences: ^2.3.5
+  pdf: ^3.13.0
+  printing: ^5.15.0
+
+  # Firebase (add after setting up google-services.json)
+  # firebase_core: ^3.3.0
+  # firebase_messaging: ^15.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/animations/
+    - assets/icons/
+  # Fonts are loaded via the google_fonts package (no local font files needed)
